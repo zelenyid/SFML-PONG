@@ -1,5 +1,6 @@
 #include "bat.hpp"
 
+// Constructor of platform
 Bat::Bat(float startX, float startY)
 {
     position.x = startX;

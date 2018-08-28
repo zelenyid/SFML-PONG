@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
+// Class of platform
 class Bat 
 {
 private:

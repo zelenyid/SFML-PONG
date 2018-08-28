@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
+// Class of ball
 class Ball
 {
 private:

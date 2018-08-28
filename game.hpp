@@ -14,6 +14,7 @@ extern const unsigned WINDOW_WIDTH;
 extern const unsigned WINDOW_HEIGHT;
 extern const sf::String TITLE;
 
+// Class of game
 class Game
 {
 private:

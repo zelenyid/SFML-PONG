@@ -5,6 +5,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 
+// Class of menu
 class Menu
 {
 private:
@@ -21,6 +22,7 @@ private:
 public:
     sf::Text menu1;
     sf::Text menu2;
+    sf::Text autor;
     sf::Sprite menuBg;
     bool isMenu = true;
 

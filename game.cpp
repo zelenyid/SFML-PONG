@@ -9,7 +9,8 @@ Game::Game():
 {
     texture.loadFromFile("Media/images/BG.png");
     bg.setTexture(texture);
-    
+
+    // Load text 
     font.loadFromFile("Media/fonts/DS-DIGIT.TTF");
 
     hud.setFont(font);
@@ -37,11 +38,12 @@ void Game::run()
     
     window.setVerticalSyncEnabled(true);
 
+    // Main Loop
     while (window.isOpen())
     {
         float time = clock.getElapsedTime().asMicroseconds();
         clock.restart();
-        time = time / 1200;
+        time = time / 1000;
 
         sf::Event event;
         while (window.pollEvent(event))
@@ -52,6 +54,7 @@ void Game::run()
            
         window.clear();
     
+        //Start menu
         if (myMenu->isMenu) 
         {
             myMenu->processMenu(window); 
@@ -86,6 +89,7 @@ void Game::drawGame(Bat &bat, Ball &ball, sf::RenderWindow &window, int &score, 
         window.close();
     }
 
+    // Output score and lives
     std::stringstream ss;
     ss << "Score:" << score << "    Lives:" << lives;
     hud.setString(ss.str());
